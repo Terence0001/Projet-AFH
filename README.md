@@ -20,3 +20,9 @@
 - Application dockerisé pour le développement
 - Route définit en API REST et testé unitairement
 - Un trello de la plannification de votre développement, des screenshots périodique de l'état de votre trello
+
+---
+
+## Pour bien démarrer le projet, suivez les instructions dans le dossier suivant:
+
+### **[Lien vers les Instructions](./instructions.md)**
