@@ -175,8 +175,8 @@ ___
    - Lorsque l'utilisateur soumet le formulaire, vous pouvez envoyer les données au backend Django via des requêtes HTTP pour obtenir la prédiction de fertilité.
 ___
 **5. Déploiement :**
-   - Vous pouvez déployer le backend Django sur un serveur web comme Gunicorn ou uWSGI, et utiliser un serveur de base de données comme PostgreSQL pour stocker les données cliniques si nécessaire.
-   - Le frontend Vue.js 3 peut être déployé sur un serveur web statique comme Nginx.
+   - Vous pouvez déployer le backend Django chez O2switch et utiliser un serveur de base de données MySQL pour stocker les données cliniques si nécessaire.
+   - Le frontend Vue.js 3 peut être déployé sur un serveur web statique Nginx.
 ___
 Il est important de noter que la création d'un modèle IA de qualité et son intégration dans une application web nécessitent une connaissance approfondie en IA, en développement web et en déploiement. Il est également essentiel de tester soigneusement l'application pour s'assurer qu'elle fonctionne correctement et de manière fiable.
 
