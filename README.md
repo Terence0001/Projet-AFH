@@ -8,7 +8,7 @@
 
 1. [Objectifs du projet](#voici-les-objectifs-primordiaux-de-ce-projet)
 2. [Livrables attendus](#Livrables-attendus)
-3. [Instructions pour bien démarrer le projet AFH](#voici-ci-dessous-les-instructions-pour-bien-démarrer-le-projet-afh)
+3. [Instructions pour bien démarrer le projet AFH](#instructions-pour-bien-démarrer-le-projet-afh)
    1. [Création de l'environnement virtuel](#1-création-de-lenvironnement-virtuel)
    2. [Activation de l'environnement virtuel](#2-activation-de-lenvironnement-virtuel)
    3. [Installation des dépendances](#3-instalation-des-dépendances-ou-paquets-dans-lenvironnement-virtuel)
@@ -43,7 +43,7 @@
 
 ---
 
-# Voici ci-dessous les instructions pour bien démarrer le projet AFH
+## Instructions pour bien démarrer le projet AFH
 
 Ces dernières vont vous permettre de créer un environnement virtuel, y installer les bonnes dépendances, le faire fonctionner et aussi utiliser un conteneur Docker
 
