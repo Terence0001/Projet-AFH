@@ -111,3 +111,19 @@ py manage.py migrate
 ```
 
 ---
+
+Le dataset "Human Sperm Head Morphology dataset (HuSHeM)" est composé de quatre dossiers, chacun contenant des images de têtes de spermatozoïdes classées selon leur morphologie. Voici un résumé des informations clés :
+
+- Dossiers :
+
+  **1. Normal :** Contient environ 50 images de têtes de spermatozoïdes avec une morphologie normale.\
+  **2. Tapered :** Contient environ 50 images de têtes de spermatozoïdes de morphologie conique (Tapered).\
+  **3. Pyriform :** Contient environ 50 images de têtes de spermatozoïdes de morphologie piriforme (Pyriform).\
+  **4. Amorphous :** Contient environ 50 images de têtes de spermatozoïdes de morphologie amorphe (Amorphous).
+
+- **Format des images :** RGB
+- **Résolution des images** : 131x131 pixels
+
+Ces images serviront à entraîner notre modèle d'intelligence artificielle pour détecter la morphologie anormale des têtes de spermatozoïdes et ainsi aider à diagnostiquer les problèmes de fertilité masculine.
+
+Pour en savoir plus sur la procédure d'utilisation du dataset et son intégration dans notre modèle, veuillez consulter la section [Instructions pour bien démarrer le projet AFH](#voici-ci-dessous-les-instructions-pour-bien-démarrer-le-projet-afh) dans ce README.
