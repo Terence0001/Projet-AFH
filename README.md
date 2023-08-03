@@ -6,7 +6,7 @@
 
 ## Sommaire
 
-1. [Objectifs du projet](#voici-les-objectifs-primordiaux-de-ce-projet)
+1. [Objectifs du projet](#objectifs-primordiaux-de-ce-projet)
 2. [Livrables attendus](#Livrables-attendus)
 3. [Instructions pour bien démarrer le projet AFH](#instructions-pour-bien-démarrer-le-projet-afh)
    1. [Création de l'environnement virtuel](#1-création-de-lenvironnement-virtuel)
@@ -24,7 +24,7 @@
 
 ---
 
-# Voici les objectifs primordiaux de ce projet :
+# Objectifs primordiaux de ce projet :
 
 - Faire la veille sur les modèles et méthodes existants pour le diagnostic de la fertilité masculine
 - Analyser et nettoyer cette base de données (photos et données cliniques)
@@ -43,7 +43,7 @@
 
 ---
 
-## Instructions pour bien démarrer le projet AFH
+# Instructions pour bien démarrer le projet AFH
 
 Ces dernières vont vous permettre de créer un environnement virtuel, y installer les bonnes dépendances, le faire fonctionner et aussi utiliser un conteneur Docker
 
