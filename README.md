@@ -9,14 +9,14 @@
 1. [Objectifs du projet](#voici-les-objectifs-primordiaux-de-ce-projet)
 2. [Livrables attendus](#Livrables-attendus)
 3. [Instructions pour bien démarrer le projet AFH](#voici-ci-dessous-les-instructions-pour-bien-démarrer-le-projet-afh)
-   1. [Création de l'environnement virtuel](#1-cr%C3%A9ation-de-lenvironnement-virtuel)
+   1. [Création de l'environnement virtuel](#1-création-de-lenvironnement-virtuel)
    2. [Activation de l'environnement virtuel](#2-activation-de-lenvironnement-virtuel)
-   3. [Installation des dépendances](#3-installation-des-dépendances-ou-paquets-dans-lenvironnement-virtuel)
+   3. [Installation des dépendances](#3-instalation-des-dépendances-ou-paquets-dans-lenvironnement-virtuel)
    4. [Navigation dans le dossier backend](#4-navigation-dans-le-dossier-backend)
-   5. [Démarrage du serveur backend](#5-d%C3%A9marrage-du-serveur-backend)
-   6. [Migration des données de la base de données](#6-migration-des-donn%C3%A9es-de-la-base-de-donn%C3%A9es)
+   5. [Démarrage du serveur backend](#5-démarage-du-serveur-backend)
+   6. [Migration des données de la base de données](#6-migrer-les-données-de-la-base-de-données)
 4. [Structure du projet](#structure-du-projet)
-5. [Prérequis](#pr%C3%A9requis)
+5. [Prérequis](./requirements.txt)
 6. [Docker](#docker)
 7. [Tests unitaires](#tests-unitaires)
 8. [Documentation API](#documentation-api)
@@ -109,3 +109,7 @@ py manage.py runserver
 ```sh
 py manage.py migrate
 ```
+
+---
+
+# Les dépendances ou prérequis pour ce projet sont dans ce fichier
