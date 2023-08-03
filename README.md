@@ -6,23 +6,25 @@
 
 ## Sommaire
 
-1. [Objectifs du projet](#objectifs-du-projet)
-2. [Livrables attendus](#livrables-attendus)
-3. [Instructions pour bien démarrer le projet AFH](#instructions-pour-bien-démarrer-le-projet-afh)
-   1. [Création de l'environnement virtuel](#1-création-de-lenvironnement-virtuel)
+1. [Objectifs du projet](#voici-les-objectifs-primordiaux-de-ce-projet)
+2. [Livrables attendus](#Livrables-attendus)
+3. [Instructions pour bien démarrer le projet AFH](#voici-ci-dessous-les-instructions-pour-bien-démarrer-le-projet-afh)
+   1. [Création de l'environnement virtuel](#1-cr%C3%A9ation-de-lenvironnement-virtuel)
    2. [Activation de l'environnement virtuel](#2-activation-de-lenvironnement-virtuel)
    3. [Installation des dépendances](#3-installation-des-dépendances-ou-paquets-dans-lenvironnement-virtuel)
    4. [Navigation dans le dossier backend](#4-navigation-dans-le-dossier-backend)
-   5. [Démarrage du serveur backend](#5-démarrage-du-serveur-backend)
-   6. [Migration des données de la base de données](#6-migration-des-données-de-la-base-de-données)
+   5. [Démarrage du serveur backend](#5-d%C3%A9marrage-du-serveur-backend)
+   6. [Migration des données de la base de données](#6-migration-des-donn%C3%A9es-de-la-base-de-donn%C3%A9es)
 4. [Structure du projet](#structure-du-projet)
-5. [Prérequis](#prérequis)
+5. [Prérequis](#pr%C3%A9requis)
 6. [Docker](#docker)
 7. [Tests unitaires](#tests-unitaires)
 8. [Documentation API](#documentation-api)
 9. [Contributions](#contributions)
 
-**Voici les objectifs primordiaux de ce projet :**
+---
+
+# Voici les objectifs primordiaux de ce projet :
 
 - Faire la veille sur les modèles et méthodes existants pour le diagnostic de la fertilité masculine
 - Analyser et nettoyer cette base de données (photos et données cliniques)
@@ -45,7 +47,7 @@
 
 Ces dernières vont vous permettre de créer un environnement virtuel, y installer les bonnes dépendances, le faire fonctionner et aussi utiliser un conteneur Docker
 
-**1. Création de l'environnement virtuel**
+### **1. Création de l'environnement virtuel**
 
 Ce dernier ira contenir toutes nos dépendances (Paquets)\
 Utiliser la commande suivante dans votre terminal (Powershell) :
@@ -56,7 +58,7 @@ python -m venv ./venv
 
 ---
 
-**2. Activation de l'environnement virtuel**
+### **2. Activation de l'environnement virtuel**
 
 Avec Powershell
 
@@ -78,7 +80,7 @@ deactivate
 
 ---
 
-**3. Instalation des dépendances (Ou paquets) dans l'environnement virtuel**
+### **3. Instalation des dépendances (Ou paquets) dans l'environnement virtuel**
 
 ```sh
 pip install -r requirements.txt
@@ -86,7 +88,7 @@ pip install -r requirements.txt
 
 ---
 
-**4. Navigation dans le dossier backend**
+### **4. Navigation dans le dossier backend**
 
 ```sh
 cd .\backend\
@@ -94,7 +96,7 @@ cd .\backend\
 
 ---
 
-**5. Démarage du serveur backend**
+### **5. Démarage du serveur backend**
 
 ```sh
 py manage.py runserver
@@ -102,7 +104,7 @@ py manage.py runserver
 
 ---
 
-**6. Migrer les données de la base de données**
+### **6. Migrer les données de la base de données**
 
 ```sh
 py manage.py migrate
