@@ -111,5 +111,3 @@ py manage.py migrate
 ```
 
 ---
-
-# Les dépendances ou prérequis pour ce projet sont dans ce fichier
