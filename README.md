@@ -18,7 +18,7 @@
 4. [1er dataset](#dataset-human-sperm-head-morphology-dataset-hushem)
 5. [2eme dataset](#dataset---fertility)
 6. [Prérequis](./requirements.txt)
-7. [Tests unitaires](#tests-unitaires)
+7. [Dévelopement du site web avec la solution IA](#création-dun-modèle-ia-utilisable-sur-un-site-web-avec-vuejs-3-et-django)
 8. [Documentation API](#documentation-api)
 9. [Contributions](#contributions)
 
@@ -148,3 +148,36 @@ Le fichier CSV "fertility" contient des informations cliniques liées à la fert
 Ces informations cliniques seront utilisées en conjonction avec les images du premier dataset pour entraîner notre modèle d'intelligence artificielle et détecter les problèmes de fertilité masculine en fonction de la morphologie des têtes de spermatozoïdes.
 
 Pour en savoir plus sur la procédure d'utilisation du dataset et son intégration dans notre modèle, veuillez consulter la section [Instructions pour bien démarrer le projet AFH](#voici-ci-dessous-les-instructions-pour-bien-démarrer-le-projet-afh) dans ce README.
+
+---
+
+
+## Création d'un modèle IA utilisable sur un site web avec Vue.js 3 et Django
+
+Pour créer un modèle IA utilisable sur un site web avec Vue.js 3 et un backend Django, voici les étapes que vous pouvez suivre :
+
+**1. Prétraitement des données :**
+   - Pour les images du dataset "Human Sperm Head Morphology dataset (HuSHeM)", vous devrez les prétraiter pour les redimensionner à une taille appropriée, les normaliser et les convertir en tenseurs. Vous pouvez utiliser des bibliothèques Python comme OpenCV et PyTorch pour cela.
+   - Pour les données cliniques du dataset "Fertility", vous devrez effectuer une normalisation des valeurs numériques et encoder les valeurs catégorielles si nécessaire.
+___
+**2. Entraînement du modèle IA :**
+   - Vous pouvez utiliser une architecture de réseau de neurones convolutifs (CNN) pour l'analyse des images. PyTorch est une excellente bibliothèque pour créer et entraîner des CNN. Vous pouvez utiliser le dataset "Human Sperm Head Morphology dataset (HuSHeM)" pour entraîner le modèle à reconnaître les différentes morphologies de spermatozoïdes.
+   - Pour inclure les données cliniques, vous pouvez les concaténer avec les caractéristiques extraites par le CNN et les utiliser comme entrée supplémentaire pour votre modèle. Vous pouvez utiliser une architecture de réseau neuronal dense (DNN) pour la partie clinique.
+   - Enfin, vous pouvez combiner les sorties du CNN et du DNN pour obtenir une prédiction finale de fertilité.
+___
+**3. Exportation et intégration du modèle :**
+   - Une fois le modèle entraîné, vous pouvez l'exporter dans un format compatible avec PyTorch, comme ONNX, pour le rendre indépendant du framework spécifique.
+   - Vous devrez créer une API REST avec Django pour servir le modèle. Cette API prendra les images et les données cliniques en entrée, effectuera le prétraitement nécessaire, puis utilisera le modèle pour effectuer la prédiction.
+   - Vous pouvez utiliser des bibliothèques comme Django REST framework pour créer facilement l'API.
+___
+**4. Frontend avec Vue.js 3 :**
+   - Dans le frontend de votre application Vue.js 3, vous pouvez créer un formulaire où les utilisateurs peuvent télécharger une image et entrer les informations cliniques.
+   - Lorsque l'utilisateur soumet le formulaire, vous pouvez envoyer les données au backend Django via des requêtes HTTP pour obtenir la prédiction de fertilité.
+___
+**5. Déploiement :**
+   - Vous pouvez déployer le backend Django sur un serveur web comme Gunicorn ou uWSGI, et utiliser un serveur de base de données comme PostgreSQL pour stocker les données cliniques si nécessaire.
+   - Le frontend Vue.js 3 peut être déployé sur un serveur web statique comme Nginx.
+___
+Il est important de noter que la création d'un modèle IA de qualité et son intégration dans une application web nécessitent une connaissance approfondie en IA, en développement web et en déploiement. Il est également essentiel de tester soigneusement l'application pour s'assurer qu'elle fonctionne correctement et de manière fiable.
+
+Si vous n'êtes pas familier avec certains aspects de cette mise en œuvre, vous pouvez également envisager de collaborer avec des développeurs spécialisés en IA et en développement web pour vous aider dans ce projet.
