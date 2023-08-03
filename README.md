@@ -15,9 +15,9 @@
    4. [Navigation dans le dossier backend](#4-navigation-dans-le-dossier-backend)
    5. [Démarrage du serveur backend](#5-démarage-du-serveur-backend)
    6. [Migration des données de la base de données](#6-migrer-les-données-de-la-base-de-données)
-4. [Structure du projet](#structure-du-projet)
-5. [Prérequis](./requirements.txt)
-6. [Docker](#docker)
+4. [1er dataset](#dataset-human-sperm-head-morphology-dataset-hushem)
+5. [2eme dataset](#dataset---fertility)
+6. [Prérequis](./requirements.txt)
 7. [Tests unitaires](#tests-unitaires)
 8. [Documentation API](#documentation-api)
 9. [Contributions](#contributions)
@@ -112,9 +112,11 @@ py manage.py migrate
 
 ---
 
+## Dataset Human Sperm Head Morphology dataset (HuSHeM)
+
 Le dataset "Human Sperm Head Morphology dataset (HuSHeM)" est composé de quatre dossiers, chacun contenant des images de têtes de spermatozoïdes classées selon leur morphologie. Voici un résumé des informations clés :
 
-- Dossiers :
+- **Dossiers :**
 
   **1. Normal :** Contient environ 50 images de têtes de spermatozoïdes avec une morphologie normale.\
   **2. Tapered :** Contient environ 50 images de têtes de spermatozoïdes de morphologie conique (Tapered).\
@@ -125,5 +127,24 @@ Le dataset "Human Sperm Head Morphology dataset (HuSHeM)" est composé de quatre
 - **Résolution des images** : 131x131 pixels
 
 Ces images serviront à entraîner notre modèle d'intelligence artificielle pour détecter la morphologie anormale des têtes de spermatozoïdes et ainsi aider à diagnostiquer les problèmes de fertilité masculine.
+
+## Dataset - Fertility
+
+Le fichier CSV "fertility" contient des informations cliniques liées à la fertilité masculine pour chaque individu de l'étude. Voici un résumé des colonnes et des informations qu'elles contiennent :
+
+- **Colonnes du csv :**
+
+  **1. Season :** Saison durant laquelle l'analyse a été effectuée (printemps, automne, etc.).\
+  **2. Age :** Âge de l'individu au moment de l'analyse.\
+  **3. Childish diseases :** Indique si l'individu a eu des maladies infantiles (oui/non).\
+  **4. Accident or serious trauma :** Indique si l'individu a subi un accident ou un traumatisme grave (oui/non).\
+  **5. Surgical intervention :** Indique si l'individu a subi une intervention chirurgicale (oui/non).\
+  **6. High fevers in the last year :** Indique la fréquence des hautes fièvres dans l'année précédente (jamais, moins de 3 mois auparavant, plus de 3 mois auparavant).\
+  **7. Frequency of alcohol consumption :** Fréquence de consommation d'alcool (jamais, occasionnelle, une fois par semaine, plusieurs fois par semaine, plusieurs fois par jour).\
+  **8. Smoking habit :** Habitude de fumer (jamais, occasionnelle, quotidienne).\
+  **9. Number of hours spent sitting per day :** Nombre d'heures passées assis par jour.\
+  **10. Diagnosis :** Diagnostic de fertilité (Normal/Altered).
+
+Ces informations cliniques seront utilisées en conjonction avec les images du premier dataset pour entraîner notre modèle d'intelligence artificielle et détecter les problèmes de fertilité masculine en fonction de la morphologie des têtes de spermatozoïdes.
 
 Pour en savoir plus sur la procédure d'utilisation du dataset et son intégration dans notre modèle, veuillez consulter la section [Instructions pour bien démarrer le projet AFH](#voici-ci-dessous-les-instructions-pour-bien-démarrer-le-projet-afh) dans ce README.
