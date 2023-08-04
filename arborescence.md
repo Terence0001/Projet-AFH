@@ -1,0 +1,17 @@
+# PROJET-AFH
+- AFH-frontend
+    - src
+    - public
+    - index.html
+- backend**
+    - src
+    - db.sqlite3
+    - dashboard
+    -manage.py
+    - pictures
+- venv
+- .gitattributes
+- .gitignore
+- docker-compose.yml
+- Dockerfile
+- requirements.txt
