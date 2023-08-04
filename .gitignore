@@ -3,3 +3,5 @@ db.sqlite3
 secret.py
 *.pyc
 migrations
+data
+
