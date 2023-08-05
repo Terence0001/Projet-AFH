@@ -1,7 +1,7 @@
-import torch
-from PIL import Image
 import numpy as np
+from PIL import Image
 import onnxruntime as rt
+from django.utils import timezone
 from .models import HushemPrediction
 from rest_framework import viewsets, status
 import torchvision.transforms as transforms
@@ -38,10 +38,6 @@ class HushemPredictionViewSet(viewsets.ViewSet):
             # Charger le modèle à partir d'un fichier ONNX
             sess = rt.InferenceSession('C:\\Users\\teren\\Documents\\GitHub\\Projet-AFH\\backend\\dashboard\\hushem_model.onnx')
 
-            # # Préparer les données d'entrée
-            # input_name = sess.get_inputs()[0].name
-            # input_data = {input_name: image_tensor.numpy()}
-
             # Préparer les données d'entrée
             input_name = sess.get_inputs()[0].name
             input_data = {input_name: image_tensor.expand(32, -1, -1, -1).numpy()}
@@ -49,11 +45,16 @@ class HushemPredictionViewSet(viewsets.ViewSet):
             # Effectuer une prédiction
             outputs = sess.run(None, input_data)
             predicted = np.argmax(outputs[0])
+            precision_array = outputs[0][predicted]
+            precision = np.mean(precision_array)
             
             # Récupérer la classe prédite
             class_names = ['normal', 'abnormal', 'healthy', 'unhealthy']
             predicted_class = class_names[predicted]
             
+            # Enregistrer la date et le résultat de la prédiction
+            prediction = HushemPrediction(date=timezone.now(), results=predicted_class,  precision=precision)
+            prediction.save()
             predictions.append(predicted_class)
 
         return Response(predictions)
