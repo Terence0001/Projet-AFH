@@ -8,3 +8,5 @@ data
 AFH-frontend/package-lock.json
 AFH-frontend/package-lock.json
 AFH-frontend/package-lock.json
+backend/hushem_model.onnx
+hushem_model.onnx

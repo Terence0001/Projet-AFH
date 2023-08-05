@@ -1,15 +1,24 @@
 import torch
 from PIL import Image
+import numpy as np
+import onnxruntime as rt
 from .models import HushemPrediction
 from rest_framework import viewsets, status
 import torchvision.transforms as transforms
 from rest_framework.decorators import action
 from rest_framework.response import Response
+from rest_framework.permissions import AllowAny
 from .serializers import HushemPredictionSerializer
 
 
 
 class HushemPredictionViewSet(viewsets.ViewSet):
+    queryset = HushemPrediction.objects.all()
+    permission_classes = [AllowAny]  # Permet l'accès sans authentification
+
+    def get_queryset(self):
+        return self.queryset
+
     @action(detail=False, methods=['post'])
     def predict(self, request):
         images = request.FILES.getlist('images')
@@ -24,20 +33,26 @@ class HushemPredictionViewSet(viewsets.ViewSet):
                 transforms.ToTensor(),
                 transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
             ])
-            image_tensor = preprocess(image)
+            image_tensor = preprocess(image).unsqueeze(0)
             
-            # Charger le modèle préentraîné
-            model = torch.load('../../hushem_model.onnx', map_location='cpu')
-            model.eval()
+            # Charger le modèle à partir d'un fichier ONNX
+            sess = rt.InferenceSession('C:\\Users\\teren\\Documents\\GitHub\\Projet-AFH\\backend\\dashboard\\hushem_model.onnx')
+
+            # # Préparer les données d'entrée
+            # input_name = sess.get_inputs()[0].name
+            # input_data = {input_name: image_tensor.numpy()}
+
+            # Préparer les données d'entrée
+            input_name = sess.get_inputs()[0].name
+            input_data = {input_name: image_tensor.expand(32, -1, -1, -1).numpy()}
             
-            # Faire une prédiction
-            with torch.no_grad():
-                outputs = model(image_tensor.unsqueeze(0))
-                _, predicted = torch.max(outputs.data, 1)
+            # Effectuer une prédiction
+            outputs = sess.run(None, input_data)
+            predicted = np.argmax(outputs[0])
             
-            # Récupérer la classe prédite (vous devrez ajuster cela en fonction de votre modèle)
+            # Récupérer la classe prédite
             class_names = ['normal', 'abnormal', 'healthy', 'unhealthy']
-            predicted_class = class_names[predicted.item()]
+            predicted_class = class_names[predicted]
             
             predictions.append(predicted_class)
 
