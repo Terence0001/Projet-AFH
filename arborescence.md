@@ -3,7 +3,7 @@
     - src
     - public
     - index.html
-- backend**
+- backend
     - src
     - db.sqlite3
     - dashboard
