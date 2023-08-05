@@ -1,6 +1,6 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="historique">
+    <h1>Voici votre historique</h1>
   </div>
 </template>
 
