@@ -3,6 +3,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
+import stores from './stores/stores' // Importer le store Vuex
 
 // Vuetify
 import 'vuetify/styles'
@@ -18,6 +19,7 @@ const vuetify = createVuetify({
 // Créez une instance d'application Vue
 const app = createApp(App)
 // Utilisez les plugins
+app.use(stores)
 app.use(router)
 app.use(vuetify)
 // Montez l'application

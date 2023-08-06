@@ -19,8 +19,7 @@
 5. [2eme dataset](#dataset---fertility)
 6. [Prérequis](./requirements.txt)
 7. [Dévelopement du site web avec la solution IA](#création-dun-modèle-ia-utilisable-sur-un-site-web-avec-vuejs-3-et-django)
-8. [Documentation API](#documentation-api)
-9. [Contributions](#contributions)
+8. [Arborescence du projet](#arborescence-projet-afh)
 
 ---
 
@@ -181,3 +180,36 @@ ___
 Il est important de noter que la création d'un modèle IA de qualité et son intégration dans une application web nécessitent une connaissance approfondie en IA, en développement web et en déploiement. Il est également essentiel de tester soigneusement l'application pour s'assurer qu'elle fonctionne correctement et de manière fiable.
 
 Si vous n'êtes pas familier avec certains aspects de cette mise en œuvre, vous pouvez également envisager de collaborer avec des développeurs spécialisés en IA et en développement web pour vous aider dans ce projet.
+
+___
+
+# Arborescence Projet-AFH
+- **AFH-frontend**
+    - src
+    - public
+    - index.html
+___
+- **backend**
+    - dashboard
+        - hushem_model.onnx
+    - datasets
+        - HuSHem
+            - 01_Normal
+            - 02_Tapered
+            - 03_Pyriform
+            - 04_Amorphous
+        - fertility.csv
+    - src
+    - db.sqlite3
+    -manage.py
+    - pictures
+___
+- **venv**
+- **.gitattributes**
+- **.gitignore**
+- **AFH-test.ipynb**
+- **docker-compose.yml**
+- **Dockerfile**
+- **hushem_model.onnx**
+- **README.md**
+- **requirements.txt**

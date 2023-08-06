@@ -7,8 +7,11 @@ WORKDIR /app
 # Installer Node.js
 RUN apt-get update && apt-get install -y nodejs npm
 
+# Copier le fichier requirements.txt dans le conteneur
+COPY requirements.txt .
+
 # Copier les fichiers de l'application dans le conteneur
-COPY . /app
+COPY . .
 
 # Installer les dépendances de l'application Django
 RUN pip install --no-cache-dir -r requirements.txt
