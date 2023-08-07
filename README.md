@@ -6,6 +6,8 @@
 
 ## Sommaire
 
+
+0. [Technologies utilisés]()
 1. [Objectifs du projet](#objectifs-primordiaux-de-ce-projet)
 2. [Livrables attendus](#Livrables-attendus)
 3. [Instructions pour bien démarrer le projet AFH](#instructions-pour-bien-démarrer-le-projet-afh)
@@ -25,6 +27,19 @@
 10. [Choix de la bibliothèque pour créer le modèle IA](#choix-de-la-bibliothèque-pour-créer-le-modèle-ia-a-revoir)
 11. [Choix du modèle d'IA](#choix-du-modèle-ia)
 
+---
+
+# Technologies utilisés
+- Pour le frontend :
+   - [VueJS 3](https://vuejs.org/)
+   - Bibliothèque de composants graphiques pour vuejs : [Vuetifty](https://vuetifyjs.com/en/)
+---
+- Pour le backend :
+   - [Django](https://www.djangoproject.com/)
+---
+- Pour l'IA :
+   - [Bibliothèque PyTorch](https://pytorch.org/)
+   - Notebook pour entrainer et exporter le modèle IA [Jupiter Notebooks](https://jupyter.org/)
 ---
 
 # Objectifs primordiaux de ce projet :
@@ -246,3 +261,4 @@ Pour en savoir plus accédez au Notebook ici [AFH-test.ipynb](AFH-test.ipynb)
 J'ai tout d'abord utilisé un modèle pré entrainé de PyTorch pour gagner du temps
 - Modèle de Deep Learning pour la reconaissance d'images : **resnet18**
 - Algorythme d'apprentissage : Régression Linéaire
+
