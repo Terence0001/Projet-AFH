@@ -15,12 +15,14 @@
    4. [Navigation dans le dossier backend](#4-navigation-dans-le-dossier-backend)
    5. [Démarrage du serveur backend](#5-démarage-du-serveur-backend)
    6. [Migration des données de la base de données](#6-migrer-les-données-de-la-base-de-données)
+   7. [Démarage du serveur frontend](#7-navigation-dans-le-dossier-afh-frontend)
 4. [1er dataset](#dataset-human-sperm-head-morphology-dataset-hushem)
 5. [2eme dataset](#dataset---fertility)
 6. [Prérequis](./requirements.txt)
 7. [Dévelopement du site web avec la solution IA](#création-dun-modèle-ia-utilisable-sur-un-site-web-avec-vuejs-3-et-django)
 8. [Arborescence du projet](#arborescence-projet-afh)
 9. [Test avec JupiterNotebook](#utilisation-dun-notebook-jupiter-pour-tester-évaluer-et-exporter-le-domèle-ia-sous-format-onnx)
+10. [Choix de la bibliothèque pour créer le modèle IA](#choix-de-la-bibliothèque-pour-créer-le-modèle-ia-a-revoir)
 
 ---
 
@@ -112,6 +114,22 @@ py manage.py migrate
 
 ---
 
+
+### **7. Navigation dans le dossier AFH-frontend**
+Tout d'abord ouvrez un deuxième terminal powershell, ensuite exécuter les commandes suivantes
+```sh
+cd AFH-frontend
+```
+Installer les paquets
+```sh
+npm install
+```
+Lancer le serveur vueJS
+```sh
+npm run dev
+```
+Maintenant la serveur est lancé et accessible sur l'adresse http://localhost:5173/
+
 ## Dataset Human Sperm Head Morphology dataset (HuSHeM)
 
 Le dataset "Human Sperm Head Morphology dataset (HuSHeM)" est composé de quatre dossiers, chacun contenant des images de têtes de spermatozoïdes classées selon leur morphologie. Voici un résumé des informations clés :
@@ -144,10 +162,6 @@ Le fichier CSV "fertility" contient des informations cliniques liées à la fert
   **8. Smoking habit :** Habitude de fumer (jamais, occasionnelle, quotidienne).\
   **9. Number of hours spent sitting per day :** Nombre d'heures passées assis par jour.\
   **10. Diagnosis :** Diagnostic de fertilité (Normal/Altered).
-
-Ces informations cliniques seront utilisées en conjonction avec les images du premier dataset pour entraîner notre modèle d'intelligence artificielle et détecter les problèmes de fertilité masculine en fonction de la morphologie des têtes de spermatozoïdes.
-
-Pour en savoir plus sur la procédure d'utilisation du dataset et son intégration dans notre modèle, veuillez consulter la section [Instructions pour bien démarrer le projet AFH](#voici-ci-dessous-les-instructions-pour-bien-démarrer-le-projet-afh) dans ce README.
 
 ---
 
@@ -219,6 +233,10 @@ ___
 
 ## Utilisation d'un Notebook Jupiter, pour tester, évaluer et exporter le domèle IA, sous format ONNX
 
-Ce format ONNX (Open Neural Network Exchange) est ouvert et conçu pour les modèles d'apprentissage automatique, avec une bonne interopérabilité, ce qui permet de le rendre indépendant du framework utilisé
+Ce format **ONNX** (Open Neural Network Exchange) est ouvert et conçu pour les modèles d'apprentissage automatique, avec une bonne interopérabilité, ce qui permet de le rendre indépendant du framework utilisé
 
 Pour en savoir plus accédez au Notebook ici [AFH-test.ipynb](AFH-test.ipynb)
+
+
+## Choix de la bibliothèque pour créer le modèle IA (A revoir)
+
