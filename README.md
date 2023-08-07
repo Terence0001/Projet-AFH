@@ -41,6 +41,9 @@
    - [Bibliothèque PyTorch](https://pytorch.org/)
    - Notebook pour entrainer et exporter le modèle IA [Jupiter Notebooks](https://jupyter.org/)
 ---
+- Pour le stockage du code source :
+   -[Github](https://github.com/Terence0001/Projet-AFH)
+
 
 # Objectifs primordiaux de ce projet :
 
@@ -53,11 +56,11 @@
 ## Livrables attendus
 
 - Application en ligne
-- Versionné sous GitHub (incluant modèle entraîné, le notebook)
-- Code documenté (incluant procédure d'installation nouveau poste dev, procédure d'entraînement du modèle, protocole d'utilisation de l'application)
+- Versionné sous GitHub (incluant modèle entraîné, le [notebook](AFH-test.ipynb))
+- Code documenté (incluant [procédure d'installation](#instructions-pour-bien-démarrer-le-projet-afh) nouveau poste dev, procédure d'entraînement du modèle, protocole d'utilisation de l'application)
 - Application dockerisé pour le développement
-- Route définit en API REST et testé unitairement
-- Un trello de la plannification de votre développement, des screenshots périodique de l'état de votre trello
+- Route définit en API REST et testé unitairement (Aucun)
+- Un trello de la plannification de votre développement, des screenshots périodique de l'état de votre trello (Aucun)
 
 ---
 
@@ -223,6 +226,10 @@ ___
 - **backend**
     - dashboard
         - hushem_model.onnx
+        - models.py
+        - serializers.py
+        - urls.py
+        - views.py
     - datasets
         - HuSHem
             - 01_Normal
@@ -231,17 +238,20 @@ ___
             - 04_Amorphous
         - fertility.csv
     - src
+      - secret.py
+      - settings.py
+      - urls.py
     - db.sqlite3
     -manage.py
-    - pictures
+- pictures
 ___
 - **venv**
+- **.dockerignore**
 - **.gitattributes**
 - **.gitignore**
 - **AFH-test.ipynb**
 - **docker-compose.yml**
 - **Dockerfile**
-- **hushem_model.onnx**
 - **README.md**
 - **requirements.txt**
 
