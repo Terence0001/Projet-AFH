@@ -20,6 +20,7 @@
 6. [Prérequis](./requirements.txt)
 7. [Dévelopement du site web avec la solution IA](#création-dun-modèle-ia-utilisable-sur-un-site-web-avec-vuejs-3-et-django)
 8. [Arborescence du projet](#arborescence-projet-afh)
+9. [Test avec JupiterNotebook](#utilisation-dun-notebook-jupiter-pour-tester-évaluer-et-exporter-le-domèle-ia-sous-format-onnx)
 
 ---
 
@@ -175,7 +176,7 @@ ___
 ___
 **5. Déploiement :**
    - Vous pouvez déployer le backend Django chez O2switch et utiliser un serveur de base de données MySQL pour stocker les données cliniques si nécessaire.
-   - Le frontend Vue.js 3 peut être déployé sur un serveur web statique Nginx.
+   - Le frontend Vue.js 3 peut être déployé sur un serveur web statique Nginx sous docker.
 ___
 Il est important de noter que la création d'un modèle IA de qualité et son intégration dans une application web nécessitent une connaissance approfondie en IA, en développement web et en déploiement. Il est également essentiel de tester soigneusement l'application pour s'assurer qu'elle fonctionne correctement et de manière fiable.
 
@@ -213,3 +214,11 @@ ___
 - **hushem_model.onnx**
 - **README.md**
 - **requirements.txt**
+
+
+
+## Utilisation d'un Notebook Jupiter, pour tester, évaluer et exporter le domèle IA, sous format ONNX
+
+Ce format ONNX (Open Neural Network Exchange) est ouvert et conçu pour les modèles d'apprentissage automatique, avec une bonne interopérabilité, ce qui permet de le rendre indépendant du framework utilisé
+
+Pour en savoir plus accédez au Notebook ici [AFH-test.ipynb](AFH-test.ipynb)
