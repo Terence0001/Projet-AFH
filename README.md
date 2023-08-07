@@ -23,6 +23,7 @@
 8. [Arborescence du projet](#arborescence-projet-afh)
 9. [Test avec JupiterNotebook](#utilisation-dun-notebook-jupiter-pour-tester-évaluer-et-exporter-le-domèle-ia-sous-format-onnx)
 10. [Choix de la bibliothèque pour créer le modèle IA](#choix-de-la-bibliothèque-pour-créer-le-modèle-ia-a-revoir)
+11. [Choix du modèle d'IA](#choix-du-modèle-ia)
 
 ---
 
@@ -240,3 +241,8 @@ Pour en savoir plus accédez au Notebook ici [AFH-test.ipynb](AFH-test.ipynb)
 
 ## Choix de la bibliothèque pour créer le modèle IA (A revoir)
 
+## Choix du modèle IA
+
+J'ai tout d'abord utilisé un modèle pré entrainé de PyTorch pour gagner du temps
+- Modèle de Deep Learning pour la reconaissance d'images : **resnet18**
+- Algorythme d'apprentissage : Régression Linéaire
